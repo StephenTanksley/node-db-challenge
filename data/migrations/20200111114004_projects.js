@@ -3,7 +3,7 @@ exports.up = async function(knex) {
         table.increments('id')
         table.string('name', 128).notNullable()
         table.string('description', 512)
-        table.boolean('completed').default(false)
+        table.boolean('completed').defaultTo(false)
     })
 };
 

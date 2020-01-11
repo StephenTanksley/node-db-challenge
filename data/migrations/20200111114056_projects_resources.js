@@ -17,6 +17,7 @@ exports.up = async function(knex) {
       table.integer('quantity')
           .notNullable()
           .unsigned()
+          .defaultTo(1)
       table.primary(['project_id', 'resources_id'])
     })
   };
