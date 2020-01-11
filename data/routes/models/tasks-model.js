@@ -21,7 +21,6 @@ const addTask = async (task) => {
     return await getById(id)
 }
 
-
 module.exports = {
     get,
     getById,
