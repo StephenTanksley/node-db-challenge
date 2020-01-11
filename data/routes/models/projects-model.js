@@ -14,6 +14,7 @@ const getById = async (id) => {
     const project = await db('projects')
         .where({ id })
         .first()
+    return {...project, completed: project.completed === 1 ? true : false}
 }
 
 const addProject = async (project) => {

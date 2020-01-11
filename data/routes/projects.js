@@ -2,8 +2,6 @@ const express = require('express')
 const projects = require('./models/projects-model')
 
 const router = express.Router()
-const id = req.params.id
-
 
 router.get('/', async (req, res, next) => {
     try {
@@ -16,7 +14,7 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:id', async (req, res, next) => {
     try {
-        res.json(await projects.getById(id))
+        res.json(await projects.getById(req.params.id))
     }
     catch (error)
     {

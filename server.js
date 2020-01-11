@@ -5,10 +5,11 @@ const resourcesRouter = require('./data/routes/resources')
 const taskRouter = require('./data/routes/tasks')
 
 const server = express();
-
 server.use(express.json());
-server.use('/api/projects', projectRouter);
 
+server.use('/api/projects', projectRouter);
+server.use('/api/resources', resourcesRouter)
+server.use('/api/tasks', taskRouter)
 
 server.use((req, res) => {
     res

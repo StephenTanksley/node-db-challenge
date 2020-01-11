@@ -8,7 +8,8 @@ const get = async () => {
 }
 
 const getById = async (id) => {
-    return await db('resources').where({ id })
+    const resource = await db('resources').where({ id })
+    return resource
 }
 
 const addResource = async (resource) => {
