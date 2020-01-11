@@ -40,11 +40,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
 
+    - A `Relational Database` is a structure for data to be stored and retrieved. `Structured Query Language (SQL)` was designed as a means of accessing data stored inside a database. 
+
 - [ ] Why do tables need a `primary key`?
+
+    - A `primary key` allows SQL a way of identifying unique elements in the same way that React requires individual elements to be identified by a key when mapping over them. This ensures that we avoid data anomalies by have a 1 to 1 relationship when requesting specific elements using an id.
 
 - [ ] What is the name given to a table column that references the primary key on another table.
 
+    - A table column that references the primary key on another table is called a `foreign key`.
+
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+    - We need to set up an intermediate table which demonstrates the relationship between tables. For this intermediate table, the primary key can't be just one number/string. Rather, it is comprised of a unique array of multiple keys. This allows us to refer to elements which may appear in multiple places in the database.
 
 ## Minimum Viable Product
 
